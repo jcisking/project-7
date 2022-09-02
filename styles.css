@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+    /* Colors */
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    /* Font */
+    font-family: 'Overpass', sans-serif;
+}
+body {
+    color: var(--White);
+    min-height: 100vh;
+    font-size: 1.5rem; 
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.ratingStateContainer {
+    max-width: 32.5rem;
+    background-color: var(--DarkBlue);
+    background-image: linear-gradient(45deg, var(--VeryDarkBlue), var(--DarkBlue));
+    padding: 3rem 3rem;
+    border-radius: 2rem;
+    
+
+} 
+.starIconContainer {
+    background-color: var(--DarkBlue);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50% ;
+    margin-bottom: 1.7rem;
+
+}
+h1 {
+    margin-bottom: 1.3rem;
+}
+p {
+    margin-bottom: 2rem;
+    color: var(--LightGrey);
+}
+.numberRatingContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.numberRatings {
+    color: var(--MediumGrey);
+    background-color: var(--DarkBlue);
+    width: 4.3rem;
+    height: 4.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding-top: 3px;
+}
+button {
+    background-color: var(--Orange);
+    color: var(--White);
+    width: 100%;
+    padding: 1.5rem 0;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    border: none;
+}
+.thankYouStateContainer {
+    display: none;
+}
