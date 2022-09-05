@@ -99,6 +99,7 @@ body {
     background-color: var(--White);
     color: var(--Orange);
 }
+
 /* Rating State Media Queries */
 
 @media screen and (min-width: 992px) {
@@ -134,12 +135,18 @@ body {
     background-color: var(--DarkBlue);
     background-image: linear-gradient(180deg, var(--DarkBlue), var(--VeryDarkBlue));
     text-align: center;
-    padding: 3rem 1rem 4rem ;
+    padding: 3rem 2rem 4rem ;
     border-radius: 1.5rem;
     /* display: none; */
 } 
 .cardBackgroundImage {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.7rem;
+}
+.thankYouH1Container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+
 }
 .thankYouH1 {
     color: var(--Orange);
@@ -147,21 +154,38 @@ body {
     font-size: 1.5rem; 
     font-weight: 400;
     background-color: var(--DarkBlue);
-    display: inline-block;
+    /* display: inline-block; */
     padding: .6rem 0 .3rem;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     width: 18rem;
-    margin-bottom: 2.2rem;
     border-radius: 1.8rem;
 }
 .thankYouH2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
 }
 .thankYouParagraph {
     color: var(--LightGrey);
     line-height: 1.5;
     
 }
+
+/* Thank You State Media Queries  */
+
+@media screen and (min-width: 992px) {
+    .thankYouStateContainer {
+        max-width: 41rem;
+        padding: 4.5rem 3.5rem  ;
+        border-radius: 2.7rem;
+        /* text-align: center; */
+    }
+    .thankYouH1 {
+        /* display: block; */
+        /* text-align: center; */
+    }
+    
+}
+
+
 
