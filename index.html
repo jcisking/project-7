@@ -10,6 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive rating component</title>
+  
 </head>
 <body>
 <div class="ratingStateContainer">
@@ -21,11 +22,11 @@
       to help us improve our offering!
     </p>
     <div class="numberRatingContainer">
-      <button type="button" class="numberRatings">1</button>
-      <button type="button" class="numberRatings">2</button>
-      <button type="button" class="numberRatings">3</button>
-      <button type="button" class="numberRatings">4</button>
-      <button type="button" class="numberRatings">5</button>
+      <button type="button" class="numberRatings" id="one">1</button>
+      <button type="button" class="numberRatings" id="two">2</button>
+      <button type="button" class="numberRatings" id="three">3</button>
+      <button type="button" class="numberRatings" id="four">4</button>
+      <button type="button" class="numberRatings" id="five">5</button>
     </div>
     <button class="submit" type="submit">
       SUBMIT
@@ -40,7 +41,7 @@
   <div class="thankYouStateContainer">
     <img class="cardBackgroundImage" src="./images/illustration-thank-you.svg" alt="">
     <div class="thankYouH1Container" >
-      <h1 class="thankYouH1" >You selected 4<!-- Add rating here --> out of 5</h1>
+      <h1 class="thankYouH1" >You selected <span id="selectedRating"></span> out of 5</h1>
     </div>
     <h2 class="thankYouH2">Thank you!</h2>
     <p class="thankYouParagraph">
@@ -51,5 +52,29 @@
 
   <!-- Thank you state end -->
   </div>
+  <script>
+    const one = document.querySelector("#one")
+    const two = document.querySelector('#two')
+    const three = document.querySelector('#three')
+    const four = document.querySelector('#four')
+    const five = document.querySelector('#five')
+    const button = document.querySelector('.submit')
+
+    let selectedNumber = null
+     
+  
+    one.addEventListener("click", () => selectedNumber = one.innerText)
+    two.addEventListener("click", () => selectedNumber = two.innerText)
+    three.addEventListener("click", () => selectedNumber = three.innerText)
+    four.addEventListener("click", () => selectedNumber = four.innerText)
+    five.addEventListener("click", () => selectedNumber = five.innerText)
+    
+    button.addEventListener("click", () => document.querySelector('#selectedRating').innerHTML = '')
+    button.addEventListener("click", () => document.querySelector('#selectedRating').append(selectedNumber))
+    
+   
+    
+    
+  </script>
 </body>
 </html>
