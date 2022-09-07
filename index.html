@@ -38,7 +38,7 @@
 
   <!-- Thank you state start -->
 
-  <div class="thankYouStateContainer">
+  <div class="thankYouStateContainer" style="display:none">
     <img class="cardBackgroundImage" src="./images/illustration-thank-you.svg" alt="">
     <div class="thankYouH1Container" >
       <h1 class="thankYouH1" >You selected <span id="selectedRating"></span> out of 5</h1>
@@ -59,22 +59,26 @@
     const four = document.querySelector('#four')
     const five = document.querySelector('#five')
     const button = document.querySelector('.submit')
-
+    
     let selectedNumber = null
-     
-  
-    one.addEventListener("click", () => selectedNumber = one.innerText)
-    two.addEventListener("click", () => selectedNumber = two.innerText)
-    three.addEventListener("click", () => selectedNumber = three.innerText)
-    four.addEventListener("click", () => selectedNumber = four.innerText)
-    five.addEventListener("click", () => selectedNumber = five.innerText)
     
-    button.addEventListener("click", () => document.querySelector('#selectedRating').innerHTML = '')
-    button.addEventListener("click", () => document.querySelector('#selectedRating').append(selectedNumber))
-    
-   
+    one.addEventListener("click", () => {selectedNumber = one.innerText}, true)
+    two.addEventListener("click", () => {selectedNumber = two.innerText}, true)
+    three.addEventListener("click", () => {selectedNumber = three.innerText}, true)
+    four.addEventListener("click", () => {selectedNumber = four.innerText}, true)
+    five.addEventListener("click", () => {selectedNumber = five.innerText}, true)
     
     
+    
+    button.addEventListener("click", () => {
+      if (selectedNumber === null) {
+        alert('Please select a number!');
+      }
+      else {
+        document.querySelector(".ratingStateContainer").style.display = 'none';
+        document.querySelector('.thankYouStateContainer').style.display = 'block';
+        document.querySelector('#selectedRating').append(selectedNumber); }
+      })
   </script>
 </body>
 </html>
